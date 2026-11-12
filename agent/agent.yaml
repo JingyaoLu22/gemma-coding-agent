@@ -1,0 +1,16 @@
+name: gemma_coding_agent
+model: gemma-4-31b-it-qat-w4a16-ct
+description: Fixes Python issues using repository navigation, checked edits, task memory and targeted verification.
+instruction: !include prompts/solver.md
+tools:
+  - run_command
+  - edit_file
+  - get_status
+  - submit_patch
+skills:
+  - skills/repo-tools
+generate_content_config:
+  temperature: 1.0
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 8192

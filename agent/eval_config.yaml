@@ -1,0 +1,6 @@
+# Per-task limits consumed by the SWE runtime.
+evaluation:
+  max_time_minutes: 8
+  max_tool_calls: 28
+  max_turns: 40
+  timeout_seconds: 180
